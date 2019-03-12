@@ -1,6 +1,6 @@
 ## Welcome to Digital Forensics
 
-This Repository Provides Resources and Programs to retrieve metadata and protect yourself on the internet.
+This repository provides resources and programs to retrieve metadata and protect yourself on the internet.
 
 ### Issues
 
