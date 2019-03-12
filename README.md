@@ -2,11 +2,12 @@
 
 This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
 
-### Issues (Template)
+### Issues
 
 If you have any problems or have found potential vulnerabilities, please write a description of the problem in the issue tab.
 
 ```markdown
+Template
 
 # Is your feature request related to a problem? Please describe.
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
