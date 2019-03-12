@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Digital Forensics
 
 You can use the [editor on GitHub](https://github.com/Apollo-o/Forensics-Tools/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
