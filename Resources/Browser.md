@@ -6,7 +6,7 @@
   - Exploit Database: https://www.exploit-db.com/
   - NCCDC: https://www.nationalccdc.org/
 
-# Tests:
+# Scans:
 
   - DNS Leak: https://www.dnsleaktest.com/
   - Browser Leak: https://browserleaks.com/
