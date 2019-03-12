@@ -1,12 +1,10 @@
 ## Welcome to Digital Forensics
 
-You can use the [editor on GitHub](https://github.com/Apollo-o/Forensics-Tools/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This Repository Provides Resources and Programs to retrieve metadata and protect yourself on the internet.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Issues
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+If you have any problems or have found potential vulnerabilities, please write a description in the issues tab.
 
 ```markdown
 Syntax highlighted code block
