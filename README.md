@@ -2,7 +2,7 @@
 
 This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
 
-### Issues
+### Issues (Template)
 
 If you have any problems or have found potential vulnerabilities, please write a description of the problem in the issue tab.
 
