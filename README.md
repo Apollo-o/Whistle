@@ -4,7 +4,7 @@ This repository provides resources and programs to retrieve metadata and protect
 
 ### Issues
 
-If you have any problems or have found potential vulnerabilities, please write a description in the issues tab.
+If you have any problems or have found potential vulnerabilities, please write a description in the issue tab.
 
 ```markdown
 
