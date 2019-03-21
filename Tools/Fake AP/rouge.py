@@ -1,34 +1,47 @@
-# AUTHOR: o-o
-# DATE: 3/20/2019 
-# DESCRIPTION: ROUGE AP.
+# Author: o-o
+# Date: 3/21/2019 
+# Description: Rouge AP.
 
 import os
 import linux
 
 # MONITOR MODE && GATEWAY ===========================================
 
+# Open Tab.
+linux.TIME = 2
+linux.tab()
+
+# Gets Required Data.
+# Precondition: Two Strings && An Int.
+# Postcondition: Returns Data.
+
 def get_info(name,command,key):
 
-  linux.TIME = 2
+  # Execute Command.
+  linux.command(command)
 
-	linux.tab()
-	linux.command(command)
+  # Read && Store Data.
+  with open(name,"r") as raw_data:
+		
+		# Options.
+	  if key == 1:
+    	data = [device.strip() for device in raw_data]
+	  elif key == 2:
+	    data = [gateway.strip().split(" ") for gateway in raw_data]
 
-	with open(name,"r") as devices:
+    # Delete File.
+    raw_data.close()
+    os.remove(name)
 
-	    if key == 1:
-    	    data = [device.strip() for device in devices]
-	    elif key == 2:
-	        data = [device.strip().split(" ") for device in devices]
+  # Return Data.
+  return data
 
-    	    devices.close()
-    	    os.remove(name)
-    	    linux.end()
+# Get Required Data.
+data1 = get_info("Interface.txt","basename -a /sys/class/net/* >> Interface.txt",1)
+data2 = get_info("Gateway.txt","route -n >> Gateway.txt",2)
 
-	return data
-
-data1 = get_info("interface.txt","basename -a /sys/class/net/* >> interface.txt",1)
-data2 = get_info("gateway.txt","route -n >> gateway.txt",2)
+# Close Tab.
+linux.end()
 
 # CREATE AP =========================================================
 
