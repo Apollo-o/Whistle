@@ -39,7 +39,7 @@ def parse():
             parser.print_help()
 
     except Exception as e:
-        print(e)
+        print(str(e))
 
 # ===================================================================
 
