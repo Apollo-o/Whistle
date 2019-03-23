@@ -18,7 +18,7 @@ def parse():
         # Group && Add Arguments.
         group1 = parser.add_argument_group("options")
         group2 = parser.add_argument_group("additional")
-        group1.add_argument("-u","--url",metavar="",help=": Insert a url <www.facebook.com>")
+        group1.add_argument("-u","--url",metavar="",help=": Insert a url <www.example.com>")
         group1.add_argument("-o","--output",metavar="",help=": Dump to output file.")
         group2.add_argument("-h","--help",action="help",default=argparse.SUPPRESS,help=": Displays the usage screen.")
 
