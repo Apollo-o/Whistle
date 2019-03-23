@@ -21,7 +21,7 @@ def parse():
         group1.add_argument("-e","--essid",metavar="",help=": Insert a network name.")
         group1.add_argument("-c","--channel",metavar="",help=": Insert a channel.")
         group1.add_argument("-o","--output",metavar="",help=": Dump to output file.")
-        group2.add_argument("-h","--help",action="help",default=argparse.SUPPRESS,help=": Displays the usage screen.")
+        group2.add_argument("-h","--help",action="help",default=argparse.SUPPRESS,help=": Display the usage screen.")
 
         # Join & Create Arguments.
         args = parser.parse_args()
