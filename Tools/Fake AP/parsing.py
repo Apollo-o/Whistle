@@ -1,5 +1,5 @@
 # Author: o-o
-# Date: 3/3/2019
+# Date: 3/23/2019
 # Description: A modified command-line parser.
 
 import argparse
@@ -10,7 +10,7 @@ import argparse
 
 def parse():
 
-    try :
+    try:
 
         # Create Object && Format.
         parser = argparse.ArgumentParser(add_help=False)
@@ -18,19 +18,20 @@ def parse():
         # Group && Add Arguments.
         group1 = parser.add_argument_group("options")
         group2 = parser.add_argument_group("additional")
-        group1.add_argument("-u","--url",metavar="",help=": Insert a url <www.facebook.com>")
+        group1.add_argument("-e","--essid",metavar="",help=": Insert a network name.")
+        group1.add_argument("-c","--channel",metavar="",help=": Insert a channel.")
         group1.add_argument("-o","--output",metavar="",help=": Dump to output file.")
         group2.add_argument("-h","--help",action="help",default=argparse.SUPPRESS,help=": Displays the usage screen.")
 
         # Join & Create Arguments.
         args = parser.parse_args()
 
-        # If the Correct Command.
-        if args.url and args.output:
+        # If Correct Command.
+        if args.essid and args.channel and args.output:
 
             # Processing Data.
             data = metadata()
-    
+
             # Output File.
             writer(args.output,data)
 
@@ -43,7 +44,7 @@ def parse():
 # ===================================================================
 
 # Author: o-o
-# Date: 3/3/2019
+# Date: 3/23/2019
 # Description: A file writer.
 
 # Write the data to a file.
