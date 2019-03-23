@@ -1,6 +1,5 @@
 # AUTHOR: o-o
 # DATE: 2/27/2019
-
 # DESCRIPTION: Executes Linux Commands.
 
 from pynput.keyboard import Key, Controller
