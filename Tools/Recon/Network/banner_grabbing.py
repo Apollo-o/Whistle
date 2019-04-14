@@ -57,3 +57,5 @@ def network(remote_ip, port_number):
     # ERROR: Raise Exception.
     except Exception as e:
         print(str(e) + "\n")
+        
+runNetwork("", "")
