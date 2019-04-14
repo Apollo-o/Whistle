@@ -44,7 +44,7 @@ def network(remote_ip, port_number):
         data = str(server.recv(3000)).split("\\r\\n")
 
         # Save Data =================================================
-        banner = open("banner.pgp","w")
+        banner = open("Info_Banner.pgp","w")
         banner.write("\n")
         for element in data:
             banner.write(element + "\n")
