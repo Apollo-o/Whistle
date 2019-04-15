@@ -9,7 +9,7 @@
 # Learn:
 
   - Process: https://tinyurl.com/yy9cjjto
-  - Tools: https://tinyurl.com/ybzxe54b 
+  - Tools: https://tinyurl.com/ybzxe54b
   - Club: https://greyhatgt.github.io/archives/
 
   - Course: https://kali.training/lessons/introduction/
