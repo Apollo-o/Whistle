@@ -4,6 +4,7 @@
 
   - CTF TIME: https://ctftime.org/
   - Exploit Database: https://www.exploit-db.com/
+  - OWASP: https://tinyurl.com/cj8x28
   - NCCDC: https://www.nationalccdc.org/
 
 # Learn:
