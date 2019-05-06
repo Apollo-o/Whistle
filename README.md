@@ -1,7 +1,3 @@
-## Welcome to Whistle
-
-This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
-
 ### Guerilla Open Access Manifesto
 
 Information is power. But like all power, there are those who want to keep it for 
@@ -62,6 +58,10 @@ privatization of knowledge — we'll make it a thing of the past. Will you join 
 Aaron Swartz 
 
 July 2008, Eremo, Italy 
+
+## Welcome to Whistle
+
+This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
 
 ### Issues
 
