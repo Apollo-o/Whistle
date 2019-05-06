@@ -1,23 +1,23 @@
 ### Guerilla Open Access Manifesto
 
-Information is power. But like all power, there are those who want to keep it for 
-themselves. The world's entire scientific and cultural heritage, published over centuries 
-in books and journals, is increasingly being digitized and locked up by a handful of 
-private corporations. Want to read the papers featuring the most famous results of the 
-sciences? You'll need to send enormous amounts to publishers like Reed Elsevier. 
+Information is power. But like all power, there are those who want to keep it for
+themselves. The world's entire scientific and cultural heritage, published over centuries
+in books and journals, is increasingly being digitized and locked up by a handful of
+private corporations. Want to read the papers featuring the most famous results of the
+sciences? You'll need to send enormous amounts to publishers like Reed Elsevier.
 
-There are those struggling to change this. The Open Access Movement has fought 
-valiantly to ensure that scientists do not sign their copyrights away but instead ensure 
-their work is published on the Internet, under terms that allow anyone to access it. But 
-even under the best scenarios, their work will only apply to things published in the future. 
+There are those struggling to change this. The Open Access Movement has fought
+valiantly to ensure that scientists do not sign their copyrights away but instead ensure
+their work is published on the Internet, under terms that allow anyone to access it. But
+even under the best scenarios, their work will only apply to things published in the future.
 Everything up until now will have been lost.
 
-That is too high a price to pay. Forcing academics to pay money to read the work of their 
+That is too high a price to pay. Forcing academics to pay money to read the work of their
 colleagues? Scanning entire libraries but only allowing the folks at Google to read them?
-Providing scientific articles to those at elite universities in the First World, but not to 
+Providing scientific articles to those at elite universities in the First World, but not to
 children in the Global South? It's outrageous and unacceptable.
 
-"I agree," many say, "but what can we do? The companies hold the copyrights, they 
+"I agree," many say, "but what can we do? The companies hold the copyrights, they
 make enormous amounts of money by charging for access, and it's perfectly legal —
 there's nothing we can do to stop them." But there is something we can, something that's
 already being done: we can fight back.
@@ -55,9 +55,9 @@ Access.
 With enough of us, around the world, we'll not just send a strong message opposing the
 privatization of knowledge — we'll make it a thing of the past. Will you join us?
 
-Aaron Swartz 
+Aaron Swartz
 
-July 2008, Eremo, Italy 
+July 2008, Eremo, Italy
 
 ## Welcome to Whistle
 
