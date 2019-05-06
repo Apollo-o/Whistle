@@ -2,7 +2,7 @@
 
 This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
 
-Guerilla Open Access Manifesto
+###Guerilla Open Access Manifesto
 
 Information is power. But like all power, there are those who want to keep it for 
 themselves. The world's entire scientific and cultural heritage, published over centuries 
