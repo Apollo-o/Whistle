@@ -7,6 +7,12 @@
   - OWASP: https://tinyurl.com/cj8x28
   - NCCDC: https://www.nationalccdc.org/
 
+# Scans:
+
+  - DNS Leak: https://www.dnsleaktest.com/
+  - Browser Leak: https://browserleaks.com/
+  - Firefox Tweaks: https://mzl.la/2CfNXbX
+
 # Learn:
 
   - Process: https://tinyurl.com/yy9cjjto
@@ -15,11 +21,10 @@
 
   - Course: https://kali.training/lessons/introduction/
 
-# Scans:
+# News:
 
-  - DNS Leak: https://www.dnsleaktest.com/
-  - Browser Leak: https://browserleaks.com/
-  - Firefox Tweaks: https://mzl.la/2CfNXbX
+  - The Hacker News: https://tinyurl.com/72mklum
+  - WikiLeaks: https://wikileaks.org/
 
 # Additional:
 
