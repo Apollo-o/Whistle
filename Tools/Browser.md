@@ -26,7 +26,7 @@
 
   - The Hacker News: https://tinyurl.com/72mklum
   - WikiLeaks: https://wikileaks.org/
-  - Qrmmnw: {link} (C9)
+  - Qrmmnw: https://medium.com/ (C9)
 
 # Additional:
 
