@@ -11,18 +11,23 @@ import re
 def link_crawler(url):
     html  = requests.get(url)
     links = re.findall(r'href=[\'"]?([^\'" >]+)',str(html.content))
+    print(len(links))
+    links = link_formatter(url,links)
     return links
 
-url = "https://www.tacoma.uw.edu/"
+def link_formatter(url,links):
+  temp = []
+  for link in links:
+    if "https" in link:
+      temp.append(link)
+    elif "http" in link:
+      temp.append(link[:4] + "s" + link[4:])
+    elif link[0] == "/":
+      temp.append(url + link[1:])
+    elif link[0] == "#":
+      temp.append(url + link)
+  return temp
 
+url   = "https://www.tacoma.uw.edu/"
 links = link_crawler(url)
-print("\n".join(links))
-
-##links = link_crawler(links[50])
-##print("\n".join(links))
-
-
-http(s)://my.uw.edu
-(https://www.tacoma.uw.edu)/node/3904
-(https://www.tacoma.uw.edu/)#global-secondary
-\\u0022#\\u0022
+print(len(links))
