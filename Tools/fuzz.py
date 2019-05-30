@@ -14,12 +14,13 @@ def link_crawler(url):
         links = re.findall(r'href=[\'"]?([^\'" >]+)',str(html.content))
         return links
     except Exception as e:
-        print(e)
+        print(str(e))
 
 # Formats Links.
 # Precondition: A String | A List.
-# Postcondition: A List.
+# Postcondition: Returns A List.
 def link_formatter(url,links):
+
     temp = []
     if links != None:
         for link in links:
@@ -34,6 +35,9 @@ def link_formatter(url,links):
                 print("",end="")
         return temp
 
+# Parse For Emails.
+# Precondition: A List.
+# Postcondition: Returns A List.
 def email_crawler(links):
     temp = []
     if links != None:
@@ -44,33 +48,16 @@ def email_crawler(links):
 # Precondition: A String.
 # Postcondition: Files.
 def main():
-
+  
     # Storage.
     email = []
     links = []
+
     # Homepage Links.
-    url = "https://github.com"
+    url = "https://www.tacoma.uw.edu"
     rlinks = link_crawler(url)
     emails = email_crawler(rlinks)
     nlinks = link_formatter(url,rlinks)
+    print("Emails: " + str(len(emails)) + "\tLinks: " + str(len(nlinks)))
 
-    # Crawl Entire Site.
-    count = 0
-    for link in nlinks:
-        rlinks = link_crawler(link)
-        emails = email_crawler(rlinks)
-        nlinks = link_formatter(url,rlinks)
-        
-        count +=1
-        
-        if rlinks != None:
-            if len(emails) >=1 and len(nlinks) >=1:
-                email.append(emails)
-                links.append(nlinks)
-        elif count == 20:
-            break
-    email.sort()
-    print(email)
-    #links.sort()
-    #print(links)
 main()
