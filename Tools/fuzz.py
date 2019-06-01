@@ -55,7 +55,7 @@ def link_formatter(url, links):
                 temp2.append(heading.strip() + "," + link.strip())
             except Exception as e:
                 print(e)
-        writer("reports.csv",temp2)
+        writer("links.csv",temp2)
 
 # ===================================================================
 
