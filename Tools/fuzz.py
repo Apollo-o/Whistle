@@ -1,14 +1,14 @@
 # Author: o-o
 # Date: 5/28/2019
-# Description: A Simple Website Crawler.
+# Description: a Simple Website Crawler.
 
 from collections import OrderedDict
 import requests
 import re
 
 # Collect All Data.
-# Precondition: A String.
-# Postcondition: A List.
+# Precondition: a String.
+# Postcondition: a List.
 def link_crawler(url):
     try:
         html    = requests.get(url)
@@ -21,7 +21,7 @@ def link_crawler(url):
 # ===================================================================
 
 # Formats Data.
-# Precondition: A String | A List.
+# Precondition: a String | a List.
 # Postcondition: Creates File.
 def link_formatter(url, links):
 
@@ -47,29 +47,29 @@ def link_formatter(url, links):
 
 # Author: o-o
 # Date: 5/28/2019
-# Description: A file writer.
+# Description: a File Writer.
 
-# Write the data to a file.
-# Precondition: A String | A List.
-# Postcondition: Write the data to a file.
+# Write the Data to a File.
+# Precondition: a String | a List.
+# Postcondition: Write the Data to a File.
 
 def writer(name,data):
 
-    # Create the file.
+    # Create the File.
     with open(name,"w") as profile:
 
-        # Write the data to the file.
+        # Write the Data to the File.
         for value in data:
             profile.write("%s\n" % (value))
 
-    # Close the file.
+    # Close the File.
     profile.close()
 
 # ===================================================================
 
 # Start Program.
-# Precondition: A String.
-# Postcondition: Write the data to a file.
+# Precondition: a String.
+# Postcondition: Write the Data to a File.
 def main():
 
     # Storage.
@@ -84,7 +84,11 @@ def main():
         data = link_crawler(link)
         links.append(data)
 
-    print(len(list(OrderedDict.fromkeys(nlinks + links[0]))))
-    #writer("links.csv",temp2)
+    # Convert a Multi-dimensional to a List.
+    data = [col for rows in links for col in rows]
+    data = list(OrderedDict.fromkeys(nlinks + data))
+
+    # Write the data to the file.
+    writer("links.csv", data)
 
 main()
