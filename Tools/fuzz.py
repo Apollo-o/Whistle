@@ -2,6 +2,7 @@
 # Date: 5/28/2019
 # Description: A Simple Website Crawler.
 
+from collections import OrderedDict
 import requests
 import re
 
@@ -12,7 +13,8 @@ def link_crawler(url):
     try:
         html    = requests.get(url)
         rlinks  = re.findall(r'href=[\'"]?([^\'" >]+)',str(html.content))
-        link_formatter(url,rlinks)
+        nlinks  = link_formatter(url,rlinks)
+        return nlinks
     except Exception as e:
         print(str(e))
 
@@ -20,53 +22,26 @@ def link_crawler(url):
 
 # Formats Data.
 # Precondition: A String | A List.
-# Postcondition: Returns A List.
+# Postcondition: Creates File.
 def link_formatter(url, links):
-    
-    temp1 = []
-    temp2 = []
+
+    # Local Variables.
+    temp = []
+
+    # Format Links.
     if links != None:
         for link in links:
             if "https" in link:
-                temp1.append(link.strip())
+                temp.append(link.strip())
             elif "http" in link:
-                temp1.append(link[:4] + "s" + link[4:].strip())
+                temp.append(link[:4] + "s" + link[4:].strip())
             elif link[0] == "/" or link[0] == "#":
-                temp1.append(url + link)
+                temp.append(url + link.strip())
             else:
                 print("",end="")
 
-        email_crawler(temp1)
-
-        for link in temp1:
-            try:
-                html    = requests.get(link)
-                title   = re.findall(r'<title[^>]*>([^<]+)</title>', str(html.content))
-                heading = ""
-                if len(title) >= 1:
-                    line = title[-1].split(" ")
-                    for element in line:
-                        if element.isalpha():
-                            heading += element + " "
-                        else:
-                            index = element.find("\\")
-                            if index > -1:
-                                heading += element[:index] + " "
-                temp2.append(heading.strip() + "," + link.strip())
-            except Exception as e:
-                print(e)
-        writer("links.csv",temp2)
-
-# ===================================================================
-
-# Parse For Emails.
-# Precondition: A List.
-# Postcondition: Returns A List.
-def email_crawler(links):
-    temp = []
-    if links != None:
-        temp  = [link[7:].strip() for link in links if "mailto:" in link and not("#" in link)]
-        writer("emails.csv",temp)
+        # Return Links.
+        return temp
 
 # ===================================================================
 
@@ -94,11 +69,22 @@ def writer(name,data):
 
 # Start Program.
 # Precondition: A String.
-# Postcondition: A CSV File.
+# Postcondition: Write the data to a file.
 def main():
 
-    # Homepage Links.
-    url = "https://www.github.com"
-    link_crawler(url)
+    # Storage.
+    links = []
+
+    # Homepage URL.
+    url     = "https://www.facebook.com"
+    nlinks  = link_crawler(url)
+
+    # Crawl Entire Site.
+    for link in nlinks:
+        data = link_crawler(link)
+        links.append(data)
+
+    print(len(list(OrderedDict.fromkeys(nlinks + links[0]))))
+    #writer("links.csv",temp2)
 
 main()
