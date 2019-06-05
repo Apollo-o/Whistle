@@ -1,17 +1,20 @@
 # Author: o-o
 # Date: 5/28/2019
-# Description: a Simple Website Crawler.
+# Description: A Simple Website Crawler.
 
 from collections import OrderedDict
 import requests
 import re
 
 # Collect All Data.
-# Precondition: a String.
-# Postcondition: a List.
+# Precondition: A String.
+# Postcondition: Returns a List.
 def link_crawler(url):
     try:
-        html    = requests.get(url)
+        html    = requests.get(url, headers = {'User-Agent' : \
+                                               'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3)\
+                                                AppleWebKit/537.36 (KHTML, like Gecko)\
+                                                Chrome/35.0.1916.47 Safari/537.36'})
         rlinks  = re.findall(r'href=[\'"]?([^\'" >]+)',str(html.content))
         nlinks  = link_formatter(url,rlinks)
         return nlinks
@@ -21,7 +24,7 @@ def link_crawler(url):
 # ===================================================================
 
 # Formats Data.
-# Precondition: a String | a List.
+# Precondition: A String | a List.
 # Postcondition: Creates File.
 def link_formatter(url, links):
 
@@ -42,6 +45,43 @@ def link_formatter(url, links):
 
         # Return Links.
         return temp
+
+# ===================================================================
+
+# Get Links Titles.
+# Precondition: A List.
+# Postcondition: Returns a List.
+def link_titles(links):
+
+    # Collet Titles.
+    data = []
+    if links != None:
+        for link in links:
+            try:
+                html    = requests.get(link, headers = {'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64)\
+                                                                        AppleWebKit/537.36 (KHTML, like Gecko)\
+                                                                        Chrome/61.0.3163.79 Safari/537.36'})
+                title   = re.findall(r'<title[^>]*>([^<]+)</title>',str(html.content))
+                heading = ""
+                if len(title) >= 1:
+                    title = title[-1].split(" ")
+                    for element in title:
+                        if element.isalpha():
+                            heading += element + " "
+                        else:
+                            index = element.find("//")
+                            if index > -1:
+                                heading += element[:index] + " "
+
+                # Handles "Not Found".
+                if not("Not Found" in heading):
+                    data.append(heading + "," + link)
+
+            except Exception as e:
+                print(str(e))
+
+        # Return Data.
+        return data
 
 # ===================================================================
 
@@ -76,7 +116,7 @@ def main():
     links = []
 
     # Homepage URL.
-    url     = "https://www.facebook.com"
+    url     = "https://www.divertns.ca/"
     nlinks  = link_crawler(url)
 
     # Crawl Entire Site.
@@ -88,7 +128,10 @@ def main():
     data = [col for rows in links for col in rows]
     data = list(OrderedDict.fromkeys(nlinks + data))
 
+    # Get Links Titles.
+    flinks = link_titles(data)
+
     # Write the data to the file.
-    writer("links.csv", data)
+    # writer("links.csv", data)
 
 main()
