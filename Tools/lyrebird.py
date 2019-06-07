@@ -40,6 +40,8 @@ def link_formatter(url, links):
                 temp.append(link[:4] + "s" + link[4:].strip())
             elif link[0] == "/" or link[0] == "#":
                 temp.append(url + link.strip())
+            elif link[0:3] == "../":
+                temp.append(url + "/" + link.strip())
             else:
                 print("",end="")
 
@@ -116,15 +118,16 @@ def main():
     links = []
 
     # Homepage URL.
-    url     = "https://www.divertns.ca/"
+    url     = "https://forum.gitlab.com"
     nlinks  = link_crawler(url)
 
     # Crawl Entire Site.
     for link in nlinks:
         data = link_crawler(link)
-        links.append(data)
+        if data != None:
+            links.append(data)
 
-    # Convert a Multi-dimensional to a List.
+    # Convert a Multi-dimensional to a List. 
     data = [col for rows in links for col in rows]
     data = list(OrderedDict.fromkeys(nlinks + data))
 
