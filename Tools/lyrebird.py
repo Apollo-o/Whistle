@@ -5,6 +5,7 @@
 from collections import OrderedDict
 import requests
 import re
+import webbrowser
 
 # Collect All Data.
 # Precondition: A String.
@@ -19,12 +20,12 @@ def link_crawler(url):
         nlinks  = link_formatter(url,rlinks)
         return nlinks
     except Exception as e:
-        print(str(e))
+        print("",end="")
 
 # ===================================================================
 
 # Formats Data.
-# Precondition: A String | a List.
+# Precondition: A String | A List.
 # Postcondition: Creates File.
 def link_formatter(url, links):
 
@@ -34,13 +35,23 @@ def link_formatter(url, links):
     # Format Links.
     if links != None:
         for link in links:
+
+            chmod = link.split(".")
+
             if "https" in link:
                 temp.append(link.strip())
             elif "http" in link:
                 temp.append(link[:4] + "s" + link[4:].strip())
+            elif "&quot;" in link:
+                data = link.split("/")
+                temp.append(url + "/" + data[1])
             elif link[0] == "/" or link[0] == "#":
                 temp.append(url + link.strip())
             elif link[0:3] == "../":
+                temp.append(url + "/" + link.strip())
+            elif chmod[-1] == "html" or chmod[-1] == "shtml":
+                temp.append(url + "/" + link.strip())
+            elif "/" in link:
                 temp.append(url + "/" + link.strip())
             else:
                 print("",end="")
@@ -50,51 +61,13 @@ def link_formatter(url, links):
 
 # ===================================================================
 
-# Get Links Titles.
-# Precondition: A List.
-# Postcondition: Returns a List.
-def link_titles(links):
-
-    # Collet Titles.
-    data = []
-    if links != None:
-        for link in links:
-            try:
-                html    = requests.get(link, headers = {'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64)\
-                                                                        AppleWebKit/537.36 (KHTML, like Gecko)\
-                                                                        Chrome/61.0.3163.79 Safari/537.36'})
-                title   = re.findall(r'<title[^>]*>([^<]+)</title>',str(html.content))
-                heading = ""
-                if len(title) >= 1:
-                    title = title[-1].split(" ")
-                    for element in title:
-                        if element.isalpha():
-                            heading += element + " "
-                        else:
-                            index = element.find("//")
-                            if index > -1:
-                                heading += element[:index] + " "
-
-                # Handles "Not Found".
-                if not("Not Found" in heading):
-                    data.append(heading + "," + link)
-
-            except Exception as e:
-                print(str(e))
-
-        # Return Data.
-        return data
-
-# ===================================================================
-
 # Author: o-o
 # Date: 5/28/2019
-# Description: a File Writer.
+# Description: A File Writer.
 
 # Write the Data to a File.
-# Precondition: a String | a List.
+# Precondition: A String | A List.
 # Postcondition: Write the Data to a File.
-
 def writer(name,data):
 
     # Create the File.
@@ -110,7 +83,7 @@ def writer(name,data):
 # ===================================================================
 
 # Start Program.
-# Precondition: a String.
+# Precondition: A String.
 # Postcondition: Write the Data to a File.
 def main():
 
@@ -118,23 +91,60 @@ def main():
     links = []
 
     # Homepage URL.
-    url     = "https://forum.gitlab.com"
-    nlinks  = link_crawler(url)
+    try:
+        url     = str(input("url:\t"))
+        scan    = int(input("pages:\t"))
+        nlinks  = link_crawler(url)
+        nlinks  = list(OrderedDict.fromkeys(nlinks))
+        print()
+        
+        # Crawl Entire Site.
+        switch = 0
+        for link in nlinks:
 
-    # Crawl Entire Site.
-    for link in nlinks:
-        data = link_crawler(link)
-        if data != None:
-            links.append(data)
+            data = link_crawler(link)
+            if switch == scan:
+                break
+            elif data != None:
+                links.append(data)
+            switch += 1
 
-    # Convert a Multi-dimensional to a List. 
-    data = [col for rows in links for col in rows]
-    data = list(OrderedDict.fromkeys(nlinks + data))
+        # Convert a Multi-dimensional to a List. 
+        data = [col for rows in links for col in rows]
+        data = list(OrderedDict.fromkeys(nlinks + data))
 
-    # Get Links Titles.
-    flinks = link_titles(data)
+        # Formats Subdomains.
+        final = []
+        for line in data:
 
-    # Write the data to the file.
-    # writer("links.csv", data)
+            if "///" in line:
+                temp = line.split("///")
+                final.append(temp[0] + "//" + temp[-1])
+            elif "//" in line:
+                temp = line.split("//")
+                final.append(temp[0] + "//" + temp[-1])
+            else:
+                final.append(line)
+
+        # Write the data to the file.
+        writer("links.txt",final)
+
+        # Open the links in the browser.
+        count   = 0
+        for link in final:
+
+            if count == 5:
+                count = 0
+                try:
+                    input(".....")
+                except KeyboardInterrupt:
+                    quit()
+
+            webbrowser.open_new_tab(link)
+            count += 1
+        reader.close()
+
+    except Exception as e:
+        print("\nError: " + str(e))
 
 main()
