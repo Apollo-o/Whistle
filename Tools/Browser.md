@@ -10,7 +10,7 @@
 # Scans:
 
   - DNS Leak: https://www.dnsleaktest.com/
-  - Browser Leak: https://browserleaks.com/ (https://tinyurl.com/y2dfeytv)
+  - Browser Leak: https://browserleaks.com/
   - Firefox Tweaks: https://mzl.la/2CfNXbX
   - Data Breaches: https://haveibeenpwned.com/
 
