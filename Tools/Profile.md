@@ -1,5 +1,7 @@
 ```markdown
 
+# Profile (Template)
+
 Photo:  [Photo]
 
 Name:   Edward M. Baldwin
