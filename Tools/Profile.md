@@ -1,6 +1,6 @@
 ```markdown
 
-# Profile (Template)
+# Profile Template
 
 Photo:  [Photo]
 
