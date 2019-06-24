@@ -1,4 +1,4 @@
-# Author: O-O
+# Author: o-o
 # Date: 6/23/2019
 # Description: A Simple Reverse Lookup Program.
 
