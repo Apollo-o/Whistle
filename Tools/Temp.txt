@@ -1,13 +1,11 @@
 import requests
 
-def fingerprint_webserver(url):
+url = "https://github.com/Apollo-o/Whistle/blob/master/Tools/Temp.txt"
 
-  try:
-    response = requests.get(url)
-    for header in response.headers: print('%s: %s' % (header, response.headers[header]))
-  except: print('%s: Not found' % header)
-
-fingerprint_webserver("httpshon-tutorial-web-app-security.html://bytescout.com/blog/pyt")
+try:
+  response = requests.get(url)
+  for header in response.headers: print('%s: %s' % (header, response.headers[header]))
+except: print('%s: Not found' % header)
 
 #https://bytescout.com/blog/python-tutorial-web-app-security.html
 #https://2.python-requests.org/en/master/user/quickstart/
