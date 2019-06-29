@@ -7,7 +7,7 @@ def fingerprint_webserver(url):
     for header in response.headers: print('%s: %s' % (header, response.headers[header]))
   except: print('%s: Not found' % header)
 
-fingerprint_webserver("https://bytescout.com/blog/python-tutorial-web-app-security.html")
+fingerprint_webserver("httpshon-tutorial-web-app-security.html://bytescout.com/blog/pyt")
 
 #https://bytescout.com/blog/python-tutorial-web-app-security.html
 #https://2.python-requests.org/en/master/user/quickstart/
