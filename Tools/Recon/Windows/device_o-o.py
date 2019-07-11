@@ -63,7 +63,7 @@ def getGeolocation():
 
     # Sends Request | Receives Status Code (200) | Converts Data to Text.
     address = external
-    send_url = "http://api.ipstack.com/" + str(address) + "?access_key=7b8f362ac3a2b5d28f2a662f7d78bc5f"
+    send_url = "http://api.ipstack.com/" + str(address) + "?access_key="
     received = requests.get(send_url)
     dictData = json.loads(received.text)
 
