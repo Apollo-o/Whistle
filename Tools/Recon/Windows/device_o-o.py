@@ -61,7 +61,7 @@ def getGeolocation():
     # Opens The Url | Reads HTML Text | Decodes Text to String.
     external = urllib.request.urlopen('https://ident.me').read().decode('utf8')
 
-    # Sends Request | Receives Status Code (200) | Converts Data to Text.
+    # Sends Request | Receives Status Code (200) | Converts Data to Text | Need Access Key.
     address = external
     send_url = "http://api.ipstack.com/" + str(address) + "?access_key="
     received = requests.get(send_url)
