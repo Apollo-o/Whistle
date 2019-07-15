@@ -59,4 +59,4 @@ def search(raw_url):
 # Runs Program.
 # Precondition: "http(s)://www.example.com:PORT"
 # Postcondition: Saves Found Links.
-search("https://ilostmymind.com:443")
+search("")
