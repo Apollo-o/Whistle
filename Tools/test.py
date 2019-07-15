@@ -1,6 +1,6 @@
 # AUTHOR: 0-0
 # DATE: 7/5/2019
-# DESCRIPTION: Scans websites for open directories.
+# DESCRIPTION: Scans a website for open directories.
 
 import requests
 import re
