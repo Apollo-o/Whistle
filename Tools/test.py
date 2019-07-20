@@ -28,6 +28,7 @@ try:
   key       = "2539516d471d7beb6b28a720d7a25024edc0f7590d345fc747418645002ac47b"
 
   # Scan the file.
+  
   obj       = api(key)
   response  = obj.scan_file(r"C:\Users\Apollo\Downloads\write-data-to-text-file-result.png", from_disk= True, timeout= 2)
   data      = json.dumps(response).split("\"")
