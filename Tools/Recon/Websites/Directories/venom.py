@@ -30,7 +30,7 @@ def search(raw_url):
                         headers=user_agent).status_code == 200:
 
             # Open & Store Test Directories.
-            with open("Paths.txt", "r") as reader:
+            with open("paths.txt", "r") as reader:
                 paths = tuple(reader.read().split("\n"))
 
             # Open & Write Data.
@@ -50,7 +50,6 @@ def search(raw_url):
                         if response.status_code == 200 and title.find(
                                 "404") == -1:
                             save.write(request + "\n")
-                            quit()
 
     except (KeyboardInterrupt, Exception) as e:
         print(str(e))
