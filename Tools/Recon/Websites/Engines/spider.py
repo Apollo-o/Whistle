@@ -107,13 +107,9 @@ def html(urls):
         for value in values:
             if key in value:
                 if "web.archive.org" in value:
-                    writer.write("<a href=\"https://{}\"\
-                    target=\"_blank\" rel=\"noopener\
-                    noreferrer\">{}</a><br>".format(value.split("//")[-1],key))
+                    writer.write("<a href=\"https://{}\" target=\"_blank\" rel=\"noopener noreferrer\">{}</a><br>".format(value.split("//")[-1],key))
                 else:
-                    writer.write("<a href=\"{}\"\
-                    target=\"_blank\" rel=\"noopener\
-                    noreferrer\">{}</a><br>".format(value,key))
+                    writer.write("<a href=\"{}\" target=\"_blank\" rel=\"noopener noreferrer\">{}</a><br>".format(value,key))
                 break
 
     writer.write("</body>")
