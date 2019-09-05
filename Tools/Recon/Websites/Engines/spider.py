@@ -4,7 +4,6 @@
 
 # Built-in Modules.
 import os
-import random
 
 # Third-party Modules.
 from collections import OrderedDict
@@ -22,17 +21,9 @@ def dork():
     user_agent = {'User-Agent':
                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
 
-    # Assign Proxies.
-    response   = requests.get('https://free-proxy-list.net/', headers=user_agent)
-    parser     = fromstring(response.content)
-    proxies    = []
-    for i in parser.xpath('//tbody/tr')[:10]:
-        if i.xpath('.//td[7][contains(text(),"yes")]'):
-            proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
-            proxies.append(proxy)
-
-    proxy = random.SystemRandom().choice(proxies)
-
+    # Assign Proxy.
+    proxy      = ["http","190.242.41.133:8080"]
+    
     # Search Engines.
     engines    = ['https://duckduckgo.com/html/?q={}&ia=web',
                   'https://search.yahoo.com/search?p={}&fp=1&nojs=1',
@@ -46,12 +37,12 @@ def dork():
     furls = []
 
     # Find URLS.
-    query = input("\n Query [{}] <- ".format(proxy))
+    query = input("\n Query [{}] <- ".format(proxy[-1]))
     for engine in engines:
         response = requests.get(
             engine.format(query),
             headers=user_agent,
-            proxies= {"http" : proxy})
+            proxies={proxy[0]:proxy[-1]})
         rurls = re.findall(r'href=[\'"]?([^\'" >]+)',
                            str(response.content))
         furls += [url for url in rurls if url.find(
@@ -79,7 +70,7 @@ def html(urls):
                 "yahoo",
                 "yimg")
 
-    # Set Up the Html Document.
+    # Set Up the HTML Document.
     writer = open("dork.html", "w")
     writer.write("<title>o-o</title>")
     writer.write("<body a link=\"#269ccc\" vlink=\"#0a0a0a\">")
