@@ -1,4 +1,4 @@
-# Author: O-O
+# Author: o-o
 # Date: 8/5/2019
 # Description: A Dork Search Engine.
 
