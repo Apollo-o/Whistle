@@ -14,6 +14,8 @@
   - Firefox Tweaks: https://mzl.la/2CfNXbX
   - Data Breaches: https://haveibeenpwned.com/
 
+  - Secure Links: https://send.firefox.com/
+
 # Learn:
 
   - Process: https://tinyurl.com/yy9cjjto
