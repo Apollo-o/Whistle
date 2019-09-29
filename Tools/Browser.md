@@ -3,7 +3,7 @@
 # Sources:
 
   - OWASP: https://tinyurl.com/cj8x28
-  - Exploit Database: https://tinyurl.com/n6afd56
+  - ED: https://tinyurl.com/n6afd56
   - NVD: https://tinyurl.com/of7abg3
 
   - CTF TIME: https://ctftime.org/
