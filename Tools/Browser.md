@@ -2,10 +2,10 @@
 
 # Sources:
 
-  - CTF TIME: https://ctftime.org/
+  - OWASP: https://tinyurl.com/cj8x28
   - NVD: https://tinyurl.com/of7abg3
   - Exploit Database: https://www.exploit-db.com/
-  - OWASP: https://tinyurl.com/cj8x28
+  - CTF TIME: https://ctftime.org/
   - NCCDC: https://www.nationalccdc.org/
 
 # Scans:
