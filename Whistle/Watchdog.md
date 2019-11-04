@@ -1,7 +1,7 @@
 ```markdown
 
 # People:
-  
+
   - Anonymous
   - CommanderX
   - Aaron Swartz
@@ -9,6 +9,14 @@
   - Chelsea Manning
   - Julian Assange
   - Edward Snowden
+  
+# Threats:
+
+  - Blackmail
+  - Smear Campaign
+  - Gag Order
+  - Propaganda
+  - Dogma
 
 # Investigation:
 
