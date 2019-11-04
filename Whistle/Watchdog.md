@@ -10,7 +10,7 @@
   - Julian Assange
   - Edward Snowden
 
-# Investigate Reporting:
+# Investigation:
 
   - https://aleph.occrp.org/
 
