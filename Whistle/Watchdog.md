@@ -18,6 +18,10 @@
   - Propaganda
   - Dogma
 
+  - Misinformation
+  - Corruption (Hidden)
+  - Unreasonable search and seizure
+
 # Investigation:
 
   - https://aleph.occrp.org/
