@@ -9,7 +9,7 @@
   - Chelsea Manning
   - Julian Assange
   - Edward Snowden
-  - Daniel J. Jones
+  - Daniel Jones
 
 # Threats:
 
