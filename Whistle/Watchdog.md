@@ -18,6 +18,7 @@
   - Gag Order
   - Propaganda
   - Dogma
+  - Troll Farms
 
   - Misinformation
   - Corruption (Hidden)
