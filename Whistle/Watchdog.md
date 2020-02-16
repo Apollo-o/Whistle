@@ -11,7 +11,7 @@
   - Edward Snowden
   - Daniel Jones
 
-# Threats:
+# Actions:
 
   - Blackmail
   - Smear Campaign
