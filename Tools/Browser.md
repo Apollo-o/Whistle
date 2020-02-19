@@ -15,8 +15,9 @@
   - Browser Leak: https://browserleaks.com/
   - Firefox Tweaks: https://mzl.la/2CfNXbX
   - Data Breaches: https://haveibeenpwned.com/
-
   - Secure Links: https://send.firefox.com/
+
+  - Opt-out: https://simpleoptout.com/
 
 # Learn:
 
