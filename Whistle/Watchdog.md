@@ -10,6 +10,8 @@
   - Julian Assange
   - Edward Snowden
   - Daniel Jones
+  - Daniel Ellsberg
+  - Katharine Gun
 
 # Actions:
 
@@ -19,6 +21,7 @@
   - Propaganda
   - Dogma
   - Troll Farms
+  - Media Trials
 
   - Misinformation
   - Corruption (Hidden)
