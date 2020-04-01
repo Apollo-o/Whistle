@@ -27,6 +27,7 @@
 
   - Misinformation
   - Corruption (Hidden)
+  - Confusion is control (Limited Information & Hysteria)
   - Unreasonable search and seizure
 
 # Investigation:
