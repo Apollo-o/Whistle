@@ -12,6 +12,7 @@
   - Daniel Jones
   - Daniel Ellsberg
   - Katharine Gun
+  - Mark Felt
 
 # Actions:
 
