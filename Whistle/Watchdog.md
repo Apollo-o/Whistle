@@ -23,6 +23,7 @@
   - Dogma
   - Troll Farms
   - Media Trials
+  - Lobbying
 
   - Misinformation
   - Corruption (Hidden)
