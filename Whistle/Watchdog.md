@@ -15,7 +15,7 @@
   - Mark Felt
   - William Binney
 
-# Actions:
+ # Actions:
 
   - Blackmail
   - Smear Campaign
