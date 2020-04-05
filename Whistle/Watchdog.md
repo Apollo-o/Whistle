@@ -13,6 +13,7 @@
   - Daniel Ellsberg
   - Katharine Gun
   - Mark Felt
+  - William Binney
 
 # Actions:
 
