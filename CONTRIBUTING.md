@@ -1,5 +1,5 @@
 # Contributing to Whistle
-I want to make contributing to this project as easy and transparent as possible, whether it's:
+I want to make contributing to this project as easy and transparent as possible, whether you are:
 
 - Reporting an issue or a bug.
 - Discussing the current state of the code.
