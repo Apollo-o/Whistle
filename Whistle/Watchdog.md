@@ -15,7 +15,7 @@
   - Mark Felt
   - William Binney
 
- # Actions:
+# Actions:
 
   - Blackmail
   - Smear Campaign
@@ -30,10 +30,23 @@
   - Corruption (Hidden)
   - Confusion is control (Limited Information & Hysteria)
   - Unreasonable search and seizure
+  
+# Attacks:
+
+  - Key escrow
+  - Trap-and-trace (Incoming) and pen register (Outgoing)
+  - Eavesdropping (Wiretapping)
+  - Dragnet collection
+  - Online monitoring
 
 # Investigation:
 
   - https://aleph.occrp.org/
   - https://www.intelligence.senate.gov/sites/default/files/documents/
+
+# Resources:
+
+  - Bills: https://www.govtrack.us
+  - OSHA:  https://www.osha.gov/
 
 ```
