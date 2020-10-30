@@ -5,9 +5,10 @@
   - OWASP: https://tinyurl.com/cj8x28
   - NVD: https://tinyurl.com/of7abg3
   - ED: https://tinyurl.com/n6afd56
-  
+
   - CTF TIME: https://ctftime.org/
   - NCCDC: https://www.nationalccdc.org/
+  - NCL: https://nationalcyberleague.org/
 
 # Scans:
 
@@ -21,6 +22,7 @@
 
 # Learn:
 
+  - Practice: https://gameofhacks.com/game
   - Process: https://tinyurl.com/yy9cjjto
   - Tools: https://tinyurl.com/ybzxe54b
   - Club: https://greyhatgt.github.io/archives/
@@ -29,10 +31,10 @@
 
 # News:
 
-  - The Hacker News: https://tinyurl.com/72mklum
+  - CISA: https://us-cert.cisa.gov/
+  - SI: https://securityintelligence.com/news/
+  - The Hacker News: https://thehackernews.com/
   - WikiLeaks: https://wikileaks.org/
-
-  - Medium: https://medium.com/
 
 # Additional:
 
