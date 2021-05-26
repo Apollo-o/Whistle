@@ -18,6 +18,9 @@
   - Data Breaches: https://haveibeenpwned.com/
   - Secure Links: https://send.firefox.com/
 
+  - VirusTotal: https://www.virustotal.com/gui/
+  - Kaspersky: https://opentip.kaspersky.com/
+
   - Simple Opt-out: https://simpleoptout.com/
   - WebChoices: https://optout.aboutads.info/
 
