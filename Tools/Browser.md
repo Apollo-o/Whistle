@@ -16,8 +16,8 @@
   - Browser Leak: https://browserleaks.com/
   - Firefox Tweaks: https://mzl.la/2CfNXbX
   - Data Breaches: https://haveibeenpwned.com/
-  - Secure Links: https://send.firefox.com/
 
+  - Secure Links: https://send.firefox.com/
   - VirusTotal: https://www.virustotal.com/gui/
   - Kaspersky: https://opentip.kaspersky.com/
 
