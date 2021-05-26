@@ -43,7 +43,8 @@
 # Additional:
 
   - Keylogger: https://www.autohotkey.com/
-  - Processes: https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+  - Processes 1: https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
+  - Processes 2: https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
   - nil: bnnj://gyynvin.xyvcuh.hyn/ (C20)
 
 ```
