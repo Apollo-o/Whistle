@@ -55,10 +55,6 @@ Access.
 With enough of us, around the world, we'll not just send a strong message opposing the
 privatization of knowledge — we'll make it a thing of the past. Will you join us?
 
-Aaron Swartz
-
-July 2008, Eremo, Italy
-
 ## Welcome to Whistle
 
 This repository provides resources and programs to retrieve metadata. As well as, tools that protect you on the internet.
